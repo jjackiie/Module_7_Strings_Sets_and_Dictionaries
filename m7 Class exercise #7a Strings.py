@@ -36,16 +36,6 @@ def main():
 main()
 
 
-# the get_login_name function accepts a first name,
-# last name and ID number as arguments. It returns a system login name.
-
-def get_login_name(first, last, idnumber):
-    # get the first three letter of the first name. if the name is less than 3 characters,
-    # the slice will return the entire first name.
-    set1 = first[0: 3]
-    set2 = last[0: 3]
-    set3 = idnumber[0: 3]
-
 
 ''''
 =================== Output ===========================
@@ -65,7 +55,17 @@ def get_login_name(first, last, idnumber):
 # Class: CMPR 114
 # ====================================
 
+# the get_login_name function accepts a first name,
+# last name and ID number as arguments. It returns a system login name.
 
+def get_login_name(first, last, idnumber):
+    # get the first three letter of the first name. if the name is less than 3 characters,
+    # the slice will return the entire first name.
+    set1 = first[0: 3]
+    set2 = last[0: 3]
+    set3 = idnumber[0: 3]
+
+# get the first three letters of the last name.
 
 
 ''''
