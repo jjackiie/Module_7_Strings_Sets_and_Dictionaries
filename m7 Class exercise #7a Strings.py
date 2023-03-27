@@ -143,3 +143,140 @@ main()
 
 
 '''
+
+
+# ====================================
+# Attached: m7 Class Exercise #7a
+# ====================================
+# File: Project #3
+# ====================================
+# Name:
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+
+# this program demonstrates how to tokenize strings.
+
+def main():
+    # strings to tokenize
+    str1 = "one two three four"
+    str2 = "10:20:30:40:50"
+    str3 = "a/b/c/d/e/f"
+
+    # display the tokens in each string
+    display_tokens(str1, " ")
+    print()
+    display_tokens(str2, ":")
+    print()
+    display_tokens(str3, "/")
+
+
+# the display_tokens function displays the tokens
+# in a string, the data parameter is the string to
+# tokenize and the delimiter parameter is the delimiter.
+def display_tokens(data, delimiter):
+    tokens = data.split(delimiter)
+    for item in tokens:
+        print(f"Token: {item}")
+
+
+# execute the main function
+main()
+
+''''
+=================== Output ===========================
+
+
+'''
+
+
+# ====================================
+# Attached: m7 Class Exercise #7a
+# ====================================
+# File: Project #4
+# ====================================
+# Name:
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+
+# this program reads test scores from a CSV file
+# and calculates each student's test average.
+
+def main():
+    # open the file
+    csv_file = open("test_scores.csv", "r")
+
+    # read the file's lines into a list
+    lines = csv_file.readlines()
+
+    # close the file
+    csv_file.close()
+
+    # process the lines
+    for line in lines:
+        # get the test scores as tokens
+        tokens = line.split(",")
+
+        # calculate the total of the test scores
+        total = 0.0
+        for token in tokens:
+            total += float(token)
+
+        # calculate the average of the test scores
+        average = total / len(tokens)
+        print(f"Average: {average}")
+
+
+# execute the main function
+main()
+
+''''
+=================== Output ===========================
+
+
+'''
+
+
+# ====================================
+# Attached: m7 Class Exercise #7a
+# ====================================
+# File: Project #5
+# ====================================
+# Name:
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+
+# this program counts the number of times
+# the letter T (uppercase or lowercase)
+# appears in a string
+
+def main():
+    # create a variable to use to hold the count.
+    # the variable must start with 0
+    count = 0
+
+    # get a string from the user
+    my_string = input("Enter a sentence: ")
+
+    # count the Ts
+    for ch in my_string:
+        if ch == "T" or ch == "t":
+            count += 1
+
+    # print the results
+    print(f"The letter T appears {count} times.")
+
+
+# call the main function
+main()
+
+''''
+=================== Output ===========================
+
+
+'''
